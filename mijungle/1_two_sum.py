@@ -5,4 +5,3 @@ class Solution(object):
             for j in range(len(nums)):
                 if nums[i]+nums[j] == target and i!=j:  
                     return [i,j]
-dadfadsfas
