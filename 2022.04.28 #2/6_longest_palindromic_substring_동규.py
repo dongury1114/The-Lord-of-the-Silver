@@ -1,4 +1,3 @@
-s="babad"
 #손코딩 까지는 완료했는데, 잘 구현되지 않아, 소스코드 참고
 #https://leetcode.com/problems/longest-palindromic-substring/discuss/2954/Python-easy-to-understand-solution-with-comments-(from-middle-to-two-ends).
 # 아이디어는 같았는데, 구현이 깔끔한 풀이
