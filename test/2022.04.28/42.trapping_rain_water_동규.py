@@ -30,19 +30,3 @@ for _ in range(1, max(height)+1): # 첫줄에서는 문제 없이 동작
         height[i] -= 1
     print(height)
 
-
-# # for hieght in range(max(height)):
-# for j in range(len(height)):
-#     if height[j] <= 0:
-#         height.popleft()
-#         j += 1
-#         break
-
-#     if height[a - 2] <= 0:
-#         height.pop()
-#         a -= 1
-#         break
-
-# count =height.count(0)
-# print(height)
-# print(count)

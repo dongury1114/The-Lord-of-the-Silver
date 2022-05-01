@@ -10,25 +10,20 @@ for idx, x in enumerate(datum):
     if x != 0:
         lt = idx
         break
-        
+
 for idx, x in enumerate(reversed(datum)):
     if x != 0:
         rt = len(datum) - idx - 1
         break
-    
+
 max_value = max(datum[lt:rt + 1])        
 res = 0
 for i in range(1, max_value + 1):
     for j in datum[lt:rt + 1]:
         if j < i:
             res += i - j
-          
+
     for k in range(lt, rt + 1):
         datum[k] -= 1
-        
-    
-print(res)
 
-    
-    
-    
+print(res)

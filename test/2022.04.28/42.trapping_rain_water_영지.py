@@ -8,7 +8,7 @@ start = 0
 end = len(height)-1
 
 water = 0
- 
+
 while 1 :
     # if end == len(height) :;'
         # break 
