@@ -1,30 +1,20 @@
 from collections import deque
-# Definition for singly-linked list.
 
 
-# class ListNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
+class solution:
+    def isPalindrome(self, head: ListNode) -> bool:
+        q = deque()
 
+        if not head:
+            print(True)
 
-# def isPalindrome(self, head: ListNode) -> bool:
+        node = head
+        while node is not None:
+            q.append(node.val)
+            node = node.next
 
-#     # 데크
-head = [1, 2, 2, 1]
+        while len(q) > 1:
+            if q.popleft() != q.pop():
+                print(False)
 
-q = deque()
-
-if not head:
-    print(True)
-
-node = head
-while node is not None:
-    q.append(node.val)
-    node = node.next
-
-while len(q) > 1:
-    if q.popleft() != q.pop():
-        print(False)
-
-print(True)
+        print(True)
