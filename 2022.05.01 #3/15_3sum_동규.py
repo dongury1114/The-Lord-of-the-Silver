@@ -1,4 +1,4 @@
-#메모리 초과.. 
+#메모리 초과.. 시간초과
 from itertools import combinations
 
 nums = [-1,0,1,2,-1,-4]
