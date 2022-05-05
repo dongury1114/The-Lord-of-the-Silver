@@ -1,5 +1,3 @@
-from typing import Optional, ListNode
-
 # Definition for singly-linked list.
 # class ListNode:
 #     def __init__(self, val=0, next=None):
@@ -7,16 +5,19 @@ from typing import Optional, ListNode
 #         self.next = next
 class Solution:
     def isPalindrome(self, head: Optional[ListNode]) -> bool:
-        res = list()
+        reverse = None
+        fast = head
+        slow = head
         
-        node = head
+        while fast and fast.next:
+            fast = fast.next.next
+            reverse, reverse.next, slow = slow, reverse, slow.next
         
-        while node is not None:
-            res.append(node.val)
-            node = node.next
+        if fast:
+            slow = slow.next
             
-        while len(res) > 1:
-            if res.pop(0) != res.pop():
-                return False
-        
-        return True
+        while reverse and reverse.val == slow.val:
+            reverse = reverse.next
+            slow = slow.next
+            
+        return not reverse
