@@ -4,26 +4,10 @@
 #         self.val = val
 #         self.next = next
 class Solution:
-    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        reverse_list = list()
-        
-        node = head
-        
-        while node:
-            reverse_list.append(node.val)
-            node = node.next
+    def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+        if (not list1) or (list2 and list1.val > list2.val):
+            list1, list2 = list2, list1
+        if list1:
+            list1.next = self.mergeTwoLists(list1.next, list2)
             
-        reverse_linked_list = None
-        tmp = None
-        
-        for x in reverse_list[::-1]:
-            if reverse_linked_list is None:
-                tmp = ListNode(x)
-                reverse_linked_list = tmp
-            else:
-                tmp.next = ListNode(x)
-                tmp = tmp.next
-                
-        return reverse_linked_list
-        
-        
+        return list1
