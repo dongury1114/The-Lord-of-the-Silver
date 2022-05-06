@@ -1,17 +1,28 @@
-<<<<<<< HEAD
+# 리스트 사용 개념이 아직 어려움 ... (discuss 참조)
 
-list1 = [1, 2, 4]
-list2 = [1, 3, 4]
-ans = list1 + list2
-ans.sort()
-print(ans)
+# iteratively(반복)
+def mergeTwoLists1(self, l1, l2):
+    dummy = cur = ListNode(0)
+    while l1 and l2:
+        if l1.val < l2.val:
+            cur.next = l1
+            l1 = l1.next
+        else:
+            cur.next = l2
+            l2 = l2.next
+        cur = cur.next
+    cur.next = l1 or l2
+    return dummy.next
 
-# 키 값을 비교 후 하나에 덮어서 출력
+# recursively(재귀)
 
 
-def abc():
-    if list1.val > list2.val
-    return list1
-=======
-
->>>>>>> a8c34b7d85a589ae31222dece04d63f1b79f536b
+def mergeTwoLists2(self, l1, l2):
+    if not l1 or not l2:
+        return l1 or l2
+    if l1.val < l2.val:
+        l1.next = self.mergeTwoLists(l1.next, l2)
+        return l1
+    else:
+        l2.next = self.mergeTwoLists(l1, l2.next)
+        return l2
