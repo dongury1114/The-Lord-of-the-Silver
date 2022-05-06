@@ -28,8 +28,8 @@ class Solution:
         return head
 
 
-# head = [1,2,3,4,5]
-# linked = None
+head = [1,2,3,4,5]
+linked = None
 
 # for val in head:
 #     if not linked:
@@ -40,6 +40,7 @@ class Solution:
 #         linked = linked.next
 
 # print(Solution.reverseList(head))
+
 
 class Solution:
     def reverseList( head: Optional[ListNode]) -> Optional[ListNode]:
