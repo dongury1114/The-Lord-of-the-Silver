@@ -5,6 +5,7 @@ class ListNode(object):
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
+        return next
         
 class Solution(object):
     def isPalindrome(self, head):
@@ -14,8 +15,8 @@ class Solution(object):
             val = head.val
             my_list.append(val)
             head = head.next
-
+            return head, head.next
         if my_list == my_list[::-1]:
             return True
         return False
-print(Solution().isPalindrome)
+print(Solution().isPalindrome(head))
