@@ -22,8 +22,8 @@ class Solution:
                 tmp = ListNode(val)
                 head = tmp #첫번째 주소 저장
             else:
-                tmp.next = ListNode(val)
-                tmp = tmp.next
+                tmp.next = ListNode(val)#이렇게 안해주면 위 조건문 계속 걸림
+                tmp = tmp.next 
 
         return head
 
