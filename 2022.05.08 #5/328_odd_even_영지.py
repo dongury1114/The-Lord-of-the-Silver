@@ -43,3 +43,23 @@ for val in head:
 
 Solution.oddEvenList(head)
 print(head.next.next.next.val)
+
+
+def oddEvenList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        if head is None :
+            return None
+        
+        tmp = head
+        add = head.next
+        add_head =  add
+        
+        while add and add.next :
+            tmp.next = tmp.next.next
+            tmp = tmp.next
+            
+            add.next = tmp.next
+            add = add.next
+
+            
+        tmp.next = add_head
+        return head
