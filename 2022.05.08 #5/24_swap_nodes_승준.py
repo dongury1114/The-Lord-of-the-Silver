@@ -1,3 +1,5 @@
+from typing import Optional, ListNode
+
 # Definition for singly-linked list.
 # class ListNode:
 #     def __init__(self, val=0, next=None):
@@ -9,7 +11,7 @@ class Solution:
         if head == None or head.next == None:
             return head
         
-        # 처음 swap만 따로 처리. 맨 처음 리턴될 결과값을 어떻게 정해야 될지 애매해서...
+        # 처음 swap만 따로 처리. 리턴될 결과값을 어떻게 지정해줘야 될지 몰라서...
         tmp1 = head
         tmp2 = head.next
         
