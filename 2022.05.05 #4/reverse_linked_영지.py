@@ -54,3 +54,5 @@ class Solution:
             node = next #다음 노드로 이동
             
         return prev
+
+#새로운 linkedlist를 안만들고 하려면 root노드 사용????

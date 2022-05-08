@@ -17,7 +17,7 @@ class Solution:
         while tmp and tmp.next :
             if not add : 
                 add = ListNode(tmp.next.val)
-                add_head = add
+                add_head = add 
             else :
                 add.next = ListNode(tmp.next.val)
                 add = add.next
