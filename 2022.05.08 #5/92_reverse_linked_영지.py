@@ -11,27 +11,34 @@ class ListNode:
         self.next = next
 class Solution:
     def reverseBetween( head: Optional[ListNode], left: int, right: int) -> Optional[ListNode]:
-        start = head
-        t = None
-        for _ in range(1,left):
-            t = start
-            start = start.next
 
+        if head == None or head.next == None or left==right :
+            return head
+
+        root = ListNode(None)
+        root.next = head
+        t = root
+        
+        for _ in range(left-1):
+            t = head
+            head = head.next
+
+        s = head
         prev = None
         for _ in range(right-left+1):
-            next = start.next
-            start.next = prev
+            next = head.next
+            head.next = prev
 
-            prev = start
-            start = next
-        if t :
-            t.next = prev
+            prev = head
+            head = next
 
-        while prev.next :
-            prev = prev.next
-        prev.next = start
-        
-        return head
+
+        t.next = prev
+        s.next = next
+
+        return root.next
+
+
 
 for val in head:
     if not linked:
