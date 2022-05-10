@@ -19,3 +19,22 @@ class Solution:
             return False
         else:
             return True
+            
+class Solution:
+    def isValid(self, s: str) -> bool:
+        stack = list()
+        s_dict = {')': '(', '}': '{', ']': '['}
+        
+        for x in s:
+            if x in s_dict.values():
+                stack.append(x)
+            else:
+                if stack and s_dict[x] == stack[-1]:
+                    stack.pop()
+                else:
+                    return False
+                    
+        if stack:
+            return False
+        else:
+            return True
