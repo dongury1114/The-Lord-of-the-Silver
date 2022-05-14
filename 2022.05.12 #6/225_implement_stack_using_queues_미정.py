@@ -1,7 +1,7 @@
 class MyStack(object):
 
     def __init__(self):
-        self.q = collections.deque()        
+        self.q = collections.deque()
 
     def push(self, x):
         """
@@ -17,7 +17,7 @@ class MyStack(object):
         :rtype: int
         """
         return self.q.popleft()
-    
+
     def top(self):
         """
         :rtype: int
@@ -28,5 +28,4 @@ class MyStack(object):
         """
         :rtype: bool
         """
-        return len(self.q)==0
-        
+        return len(self.q) == 0
