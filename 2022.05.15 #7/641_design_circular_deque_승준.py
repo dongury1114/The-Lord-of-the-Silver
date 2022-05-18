@@ -4,6 +4,8 @@ class ListNode:
         self.next = next
 
 # head, tail을 이용하기 때문에 앞의 문제와 같이 p1, p2가 필요없다. 얼만큼 채워져 있는지를 확인해 Full인지 Empty인지 알기 위해 len과 k(채울 수 있는 노드 최댓값)이 필요하다.
+# 연결 리스트의 head와 tail을 통해 노드를 추가하기 때문에 따로 포인터가 필요없다.
+# 애초에 앞 공간이 비어있다는 개념 자체가 없다.
 class MyCircularDeque:
 
     def __init__(self, k: int):
