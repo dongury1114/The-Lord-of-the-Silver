@@ -14,5 +14,11 @@ for i in s:
                 break
     stack.append(i)
 
+<<<<<<< HEAD
+count = max(count,len(stack))
+
+print(count)
+=======
 count = max(count, len(stack))
 print(count)
+>>>>>>> 6dd12bb4638df0b9b8dc80b6620f27af9386ed1a
