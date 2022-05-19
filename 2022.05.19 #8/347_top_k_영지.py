@@ -1,4 +1,3 @@
-
 from collections import Counter
 
 
@@ -15,6 +14,7 @@ k = 2
 # print(result)
 
 c = Counter(nums)
+print(c)
 c = sorted(c.items(), key=lambda x: x[1], reverse=True)[:k]
 
 result = [x[0] for x in c]

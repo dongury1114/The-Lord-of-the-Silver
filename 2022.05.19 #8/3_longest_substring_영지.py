@@ -16,4 +16,5 @@ for i in s :
     stack.append(i)
 
 count = max(count,len(stack))
+
 print(count)
