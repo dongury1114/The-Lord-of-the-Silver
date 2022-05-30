@@ -17,10 +17,10 @@ class Solution:
                 visit.add(i)
                 for j in graph[i] : 
                     if not dfs(j) :
-                        return False
+                        return False # 순환
                 visit.remove(i)
                 ok.add(i) 
-                return True
+                return True #
             
 
             visit = set()
