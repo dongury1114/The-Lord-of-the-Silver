@@ -26,7 +26,7 @@ class Codec:
     def deserialize(self, data: str) -> TreeNode:
         if data == 'null':
             return []
-        
+
         data = data.split()
         for idx, value in enumerate(data):
             data[idx] = TreeNode(value)
