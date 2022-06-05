@@ -6,11 +6,8 @@
 #         self.right = right
 class Solution(object):
     val = 0
+
     def bstToGst(self, root):
-        """
-        :type root: TreeNode
-        :rtype: TreeNode
-        """
         if root:
             self.bstToGst(root.right)
             self.val += root.val
