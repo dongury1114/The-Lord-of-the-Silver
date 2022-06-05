@@ -22,6 +22,7 @@ class Solution:
                 
                 if abs(left - right) > 1:
                     self.result = False
+                    return
                 
                 return max(left, right)
                 
