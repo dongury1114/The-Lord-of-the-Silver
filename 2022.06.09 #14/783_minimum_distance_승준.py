@@ -5,14 +5,14 @@
 class Solution:
     result = sys.maxsize
     previous = -sys.maxsize
-    
+
     def minDiffInBST(self, root: Optional[TreeNode]) -> int:
         if root.left:
             self.minDiffInBST(root.left)
-            
+
         self.result = min(self.result, abs(root.val - self.previous))
         self.previous = root.val
-        
+
         if root.right:
             self.minDiffInBST(root.right)
 
