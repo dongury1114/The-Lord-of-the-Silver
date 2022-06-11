@@ -12,6 +12,5 @@ class Solution:
             node = TreeNode(inorder[index])
             node.left = self.buildTree(preorder, inorder[0:index])
             node.right = self.buildTree(preorder, inorder[index+1:])
-        
+
             return node
-        

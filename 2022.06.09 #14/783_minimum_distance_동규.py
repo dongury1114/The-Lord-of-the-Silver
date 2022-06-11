@@ -4,7 +4,6 @@ class Solution:
         self.result = sys.maxsize
 
     def minDiffInBST(self, root: TreeNode) -> int:
-        # 32ms
         if root is None:
             return
 
