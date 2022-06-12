@@ -2,6 +2,7 @@
 # call stack에 쌓여 있는 것들 중 맨 아래에 있는, 즉 맨 처음 minDiffInBST의 return 값을 정답으로 인식하는 건가?
 # result, previous는 어떻게 이렇게 설정할 생각을 했을까, 이 구조를 어떻게 봐야 이해가 잘 될까
 
+# 중위 순회
 class Solution:
     result = sys.maxsize
     previous = -sys.maxsize
