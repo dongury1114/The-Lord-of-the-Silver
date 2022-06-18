@@ -1,4 +1,4 @@
-#간단 풀이
+# 간단 풀이
 # class Solution(object):
 #     def intersection(self, nums1, nums2):
 #         """
