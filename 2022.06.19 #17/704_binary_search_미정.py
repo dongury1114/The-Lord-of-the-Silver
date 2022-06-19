@@ -14,8 +14,8 @@ class Solution(object):
             elif nums[mid] > target:
                 right = mid-1
             elif nums[mid] < target:
-                left = mid +1
-                
+                left += 1
+
         return -1
 # Runtime: 301 ms, faster than 35.73% of Python online submissions for Binary Search.
 # Memory Usage: 14.7 MB, less than 53.68% of Python online submissions for Binary Search.
