@@ -1,4 +1,3 @@
-
 class Solution(object):
     def search(self, nums, target):
         """
@@ -6,7 +5,6 @@ class Solution(object):
         :type target: int
         :rtype: int
         """
-        
         left = 0
         right = len(nums)-1
         while left <= right:
@@ -14,13 +12,14 @@ class Solution(object):
             if nums[mid] == target:
                 return mid
             elif nums[mid] > target:
-                right -= 1
+                right = mid-1
             elif nums[mid] < target:
-                left += 1 
+                left = mid +1
                 
         return -1
-# Runtime: 519 ms, faster than 5.07% of Python online submissions for Binary Search.
-# Memory Usage: 14.6 MB, less than 53.80% of Python online submissions for Binary Search.
+# Runtime: 301 ms, faster than 35.73% of Python online submissions for Binary Search.
+# Memory Usage: 14.7 MB, less than 53.68% of Python online submissions for Binary Search.
+
 
 # 간단 풀이
 # class Solution(object):
