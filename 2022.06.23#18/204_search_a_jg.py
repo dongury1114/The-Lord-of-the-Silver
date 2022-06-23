@@ -5,7 +5,7 @@ class Solution:
         #         if j == target:
         #             return True
         # return False
-         
+
         def find(n, target):
             start = 0
             end = len(n) - 1
@@ -17,14 +17,12 @@ class Solution:
                 elif n[mid] > target:
                     end = mid - 1
                 else:
-                    start = mid +1
+                    start = mid + 1
             return 0
-        
+
         for i in matrix:
             if i[-1] < target:
                 continue
             if(find(i, target)):
                 return True
         return False
-    
-        
