@@ -1,24 +1,16 @@
-class Solution(object):
-    def singleNumber(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
-        result = 0
-        for num in nums:
-            result ^= num
+from collections import Counter
+
+
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        tmp = Counter(nums).most_common()
+        result = tmp[-1][0]
         return result
 
-# 쉬운 풀이
-# class Solution(object):
-#     def singleNumber(self, nums):
-#         """
-#         :type nums: List[int]
-#         :rtype: int
-#         """
-#         for i in nums:
-#             if nums.count(i)!=2:
-#                 return i
 
-# Runtime: 7056 ms, faster than 5.01% of Python online submissions for Single Number.
-# Memory Usage: 15.5 MB, less than 90.29% of Python online submissions for Single Number.
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        result = 0
+        for i in nums:
+            result ^= i
+        return result
